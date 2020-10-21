@@ -1,1 +1,2 @@
-alert("Hola")
+recipiente = "Puta";
+alert(recipiente)
