@@ -10,11 +10,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 app.listen(process.env.PORT || 3000, () => console.log("Server is running!"));
-mongoose.connect(process.env.MONGO_URI, { useFindAndModify: false ,useNewUrlParser: true, useUnifiedTopology: true });
 
-
-app.use('/api/meals', meals);
-app.use('/api/orders', orders);
+app.use('/api/meals', meals)
+app.use('/api/orders', orders)
 
 module.exports = app

@@ -4,9 +4,7 @@ const Orders = require('../models/Orders')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    Orders.find({})
-    .exec()
-    .then(x => res.status(200).send(x));
+    Orders.find({});
 })
 
 router.get('/:id', (req, res) => {
@@ -16,7 +14,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    Orders.create(req.body).then(x => res.status(201).send(x))
+    Orders.create(req.body).then(x => req.status(201).send(x))
 })
 
 router.put('/:id', (req, res) => {

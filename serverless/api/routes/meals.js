@@ -4,9 +4,9 @@ const Meals = require('../models/Meals')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    Meals.find()
+    Meals.find({})
     .exec()
-    .then(x => res.status(200).send(x))
+    .then(x => res.status(200).send(x));
 })
 
 router.get('/:id', (req, res) => {
@@ -16,7 +16,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    Meals.create(req.body).then(x => req.status(201).send(x))
+    Meals.create(req.body).then(x => res.status(201).send(x))
 })
 
 router.put('/:id', (req, res) => {
