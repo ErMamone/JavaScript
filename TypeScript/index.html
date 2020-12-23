@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/united.bootstrap.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navabar-header">
+                <span class="navbar-brand">MultiMath</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-horizontal" id="nameform">
+        <div class="form-group">
+            <label for="playerName" class="col-sm-2 control-label">Player Name</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="playerName" size="20" placeholder="Player">
+            </div>
+        </div>
+    
+
+        <div class="form-group">
+            <label for="factor" class="col-sm-2 control-label">Factor</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="factor" size="20" value="5" placeholder="factor">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="problemCount" class="col-sm-2 control-label">Number of problems</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="problemCount" size="20" value="" placeholder="Problem count">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary" id="startgame">Start Game</button>
+                <button class="btn btn-success" id="calculate"  disabled>Calculate Score</button>
+            </div>  
+        </div>
+    </div>
+
+    <div class="form-horizontal" id="game"></div>
+
+    <div class="col-sm-offset-2 col-sm-10" id="scores">
+        <h2>Scoreboard</h2>
+        <h4 id="postedScores">No scores yet</h4>
+    </div>
+
+    <div class="col-sm-offset-2 col-sm-10" id="messages"></div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
